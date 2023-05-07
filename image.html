@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGES</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+
+<body>
+    <div class="hero">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="biography.html">BIOGRAPHY</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="timetable.html">TIME TABLE</a></li>
+                <li><a href="gallery.html">GALLERIES</a></li>
+                <li><a href="download.html">DOWNLOAD</a></li>
+                <li><a href="link.html">LINKS</a></li>
+                <li><a href="link.html">LOGIN</a></li>
+                <li><a href="link.html">LOGOUT</a></li>
+            </ul>
+        </nav> 
+
+</section>
+
+<hr>
+        <div class="detel">
+            <h1>MY <span>IMAGE COLLECTION</span></h1>
+            <p>Collection of my random image taken and favourite view </p>
+            <a href="gallery.html">Back to Gallery</a>
+        </div><hr>
+
+<section id="image">
+<div style="text-align:center">
+  <h2 style="color:#F4EEE0;">Image Gallery</h2>
+  <p style="color:#F4EEE0;">Click on the images below for a bigger view at the bottom:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="images/col1.jpg" alt="Masjid Shah Alam" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col2.jpg" alt="Kopi Pokok" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col3.jpg" alt="Masjid Shah Alam" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col4.jpg" alt="Bukit Bintang" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col5.jpg" alt="Bukit Taisho" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col6.jpg" alt="DC" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col7.jpg" alt="Engineering" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col8.jpg" alt="He & She" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col9.jpg" alt="MK18" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col10.jpg" alt="Sky" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col11.jpg" alt="Pulau Pinang" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/col12.jpg" alt="Pulau Pinang" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+</section>
+
+<br><br><br><br></div>
+
+<footer>
+    <div class="footer">
+        <div class="row;text-align:auto;">
+        Copyright © 2023- All rights reserved 
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
